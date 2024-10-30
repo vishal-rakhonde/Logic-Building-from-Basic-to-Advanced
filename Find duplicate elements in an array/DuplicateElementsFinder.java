@@ -1,7 +1,19 @@
+import java.util.Scanner;
 public class DuplicateElementsFinder {
     public static void main(String[] args) {
-        int[] array = {1, 2, 3, 4, 5, 2, 3, 6};
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter the number of elements: ");
+        int n = sc.nextInt();
+        int[] array = new int[n];
+
+        System.out.println("Enter the elements:");
+        for (int i = 0; i < n; i++) {
+            array[i] = sc.nextInt();
+        }
+
         findDuplicates(array);
+        sc.close();
     }
 
     public static void findDuplicates(int[] array) {
