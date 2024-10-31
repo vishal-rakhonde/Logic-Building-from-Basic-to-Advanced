@@ -1,6 +1,9 @@
+import java.util.Scanner;
 public class FibonacciSeries {
     public static void main(String[] args) {
-        int n = 5; 
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the number of terms: ");
+        int n = sc.nextInt();
         int a = 0, b = 1;
         
         System.out.print("Fibonacci Series up to " + n + " terms: ");
@@ -11,5 +14,6 @@ public class FibonacciSeries {
             a = b;
             b = next;
         }
+		sc.close();
     }
 }
